@@ -12,8 +12,14 @@
     <main class="page-shell">
       <section class="todo-card" aria-labelledby="page-title">
         <header class="card-header">
-          <p class="eyebrow">把想做的事，一件件完成</p>
-          <h1 id="page-title">待辦清單</h1>
+          <div class="title-group">
+            <p class="eyebrow">把想做的事，一件件完成</p>
+            <h1 id="page-title">待辦清單</h1>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+            <span id="theme-icon" aria-hidden="true">🌙</span>
+            <span id="theme-label">深色模式</span>
+          </button>
         </header>
 
         <form class="todo-form" id="todo-form">
@@ -29,6 +35,12 @@
           >
           <button class="add-button" type="submit">新增</button>
         </form>
+
+        <div class="filter-bar" role="group" aria-label="篩選待辦事項">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button class="filter-button" type="button" data-filter="active" aria-pressed="false">未完成</button>
+          <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">已完成</button>
+        </div>
 
         <ul class="todo-list" id="todo-list" aria-live="polite"></ul>
         <p class="empty-state" id="empty-state">還沒有任何待辦事項,新增一個吧!</p>

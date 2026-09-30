@@ -87,7 +87,7 @@ function getVisibleTodos() {
 function getEmptyMessage() {
   if (todos.length === 0) return "還沒有任何待辦事項,新增一個吧!";
   if (currentFilter === "active") return "太棒了,沒有未完成的事項!";
-  return "還沒有已完成的事項。";
+  return "目前沒有已完成的事項，切回「全部」即可查看仍保留的項目。";
 }
 
 function renderTodos() {
